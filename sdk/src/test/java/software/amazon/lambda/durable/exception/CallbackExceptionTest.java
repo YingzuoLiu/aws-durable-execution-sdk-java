@@ -64,8 +64,10 @@ class CallbackExceptionTest {
                 "RejectedError,denied,RejectedError: denied",
                 "NULL,denied,denied",
                 "'',denied,denied",
-                "NULL,NULL,NULL",
-                "'','', ''"
+                "NULL,NULL,Callback failed",
+                "NULL,'',Callback failed",
+                "'',NULL,Callback failed",
+                "'','',Callback failed"
             },
             nullValues = "NULL")
     void testCallbackFailureMessagePreservesPresentFields(String type, String message, String expected) {
