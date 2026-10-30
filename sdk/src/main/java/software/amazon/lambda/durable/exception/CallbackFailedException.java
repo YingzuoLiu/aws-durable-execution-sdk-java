@@ -25,6 +25,9 @@ public class CallbackFailedException extends CallbackException {
             }
             return errorType + ": " + errorMessage;
         }
+        if (errorMessage == null || errorMessage.isEmpty()) {
+            return "Callback failed";
+        }
         return errorMessage;
     }
 }
